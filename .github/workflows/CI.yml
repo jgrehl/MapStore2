@@ -171,8 +171,10 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
       - name: Install mapstore.war
-        run: 
-          mvn install -Pbinary,printing,ldap
+      - run: "npm install"
+      - run: "npm run fe:build"
+      - run: "npm run jsdoc:build"
+      - run: "mvn clean install -Dmapstore2.version=$GITHUB_REF_NAME -Pbinary,printing,ldap
       ############
       # Publish
       ##########
