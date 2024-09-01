@@ -1,7 +1,5 @@
 FROM tomcat:9-jdk11-openjdk AS mother
-LABEL maintainer="Alessandro Parma<alessandro.parma@geosolutionsgroup.com>"
-ARG MAPSTORE_WEBAPP_SRC="https://github.com/geosolutions-it/MapStore2/releases/latest/download/mapstore.war"
-ADD "${MAPSTORE_WEBAPP_SRC}" "/mapstore/"
+LABEL maintainer="Jens Grehl<likeluckyjoe@gmail.com>"
 
 COPY ./docker/* /mapstore/docker/
 WORKDIR /mapstore
@@ -22,7 +20,7 @@ ENV GEOSTORE_OVR_OPT=""
 ENV JAVA_OPTS="${JAVA_OPTS} ${GEOSTORE_OVR_OPT} -Ddatadir.location=${DATA_DIR}"
 ENV TERM xterm
 
-COPY --from=mother "/mapstore/mapstore.war" "${MAPSTORE_WEBAPP_DST}/mapstore.war"
+COPY "product/target/mapstore.war" "${MAPSTORE_WEBAPP_DST}/mapstore.war"
 COPY --from=mother "/mapstore/docker" "${CATALINA_BASE}/docker/"
 
 COPY binary/tomcat/conf/server.xml "${CATALINA_BASE}/conf/"
