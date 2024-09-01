@@ -135,15 +135,6 @@ jobs:
           key: mapstore-${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             mapstore-${{ runner.os }}-maven-
-
-      ###############
-      # NPM CHECKS
-      #############
-      - name: npm install
-        run: npm install
-
-      - name: compile
-        run: npm run fe:build
       ################
       # JAVA CHECKS
       ##############
@@ -164,11 +155,6 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '11.x'
-      - name: Set up Maven Central Repository
-        uses: actions/setup-java@v3
-        with:
-          java-version: '11'
-          distribution: 'temurin'
       ############
       # Build
       ##########
