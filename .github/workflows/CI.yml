@@ -151,7 +151,7 @@ jobs:
         run: mvn --batch-mode --update-snapshots verify
   build-publish:
     runs-on: ubuntu-latest
-    if:  ${{ github.event_name == 'push' && github.repository == 'geosolutions-it/MapStore2' }}
+    if:  ${{ github.event_name == 'push' }}
     needs: [test-front-end, test-back-end, build]
     steps:
       - name: "checking out"
