@@ -32,7 +32,7 @@ Moreover the keycloak provider allows to configure advanced features like the **
 !!! note
     For the moment the generic `oidc` provider does not support multiple instances. This means that you can configure only **one** generic `oidc` provider. You can configure the specific providers (e.g., `google`, `keycloak`) in addition to the generic `oidc` provider, but not multiple instances of the generic `oidc` provider. So for instance you can configure a generic `oidc` provider (e.g. connected to Github) plus a `google` and a `keycloak` provider, but not two generic `oidc` providers.
 
-### OpenID connect (generic)
+### OpenID connect (experimental)
 
 In order to configure the generic OpenID provider with a service of your choice you have to:
 
@@ -96,7 +96,7 @@ oidcOAuth2Config.internalRedirectUri=http://localhost:8080/mapstore
 - `oidcOAuth2Config.globalLogoutEnabled`: (*optional*): if true (and the server supports it) invokes global logout on MapStore logout
 
 !!! note
-    The `rolesClaim` and `groupsClaim` are optional. If you don't need to map roles or groups, you can omit them. At the moment, there is no mapping for roles and groups for the generic OIDC provider. If you need to map roles and groups, you can use the `keycloak` provider.
+    The only mandatory claim is the `email` or what you indicated in `oidcOAuth2Config.principalKey`. The `rolesClaim` and `groupsClaim` configurations are optional. If you don't need to map roles or groups, you can omit them. At the moment, there is no mapping for roles and groups for the generic OIDC provider. If you need to map roles and groups, you can use the `keycloak` provider.
 
 #### Configure the MapStore front-end
 

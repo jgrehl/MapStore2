@@ -5,8 +5,8 @@
  * This source code is licensed under the BSD-style license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import React, { useState, useEffect } from 'react';
-import {get, find, isEmpty} from 'lodash';
+import React, { useState } from 'react';
+import {get, find} from 'lodash';
 import Message from '../../I18N/Message';
 import HTML from '../../I18N/HTML';
 
@@ -16,7 +16,7 @@ import InfoPopover from '../../widgets/widget/InfoPopover';
 import { FormControl as FC, Form, Col, FormGroup, ControlLabel, Alert } from "react-bootstrap";
 
 import localizedProps from '../../misc/enhancers/localizedProps';
-import {defaultPlaceholder, isValidURL} from "./MainFormUtils";
+import {checkUrl} from "./MainFormUtils";
 
 const FormControl = localizedProps('placeholder')(FC);
 
@@ -35,7 +35,7 @@ const DefaultURLEditor = ({ service = {}, onChangeUrl = () => { } }) => {
                     style={{
                         textOverflow: "ellipsis"
                     }}
-                    placeholder={defaultPlaceholder(service)}
+                    placeholder={'catalog.urlPlaceHolders.' + service.type}
                     value={service && service.url}
                     onChange={(e) => onChangeUrl(e.target.value)}/>
             </Col>
@@ -89,7 +89,7 @@ const TmsURLEditor = ({ serviceTypes = [], onChangeServiceProperty, service = {}
                         style={{
                             textOverflow: "ellipsis"
                         }}
-                        placeholder={"e.g. https://{s}.myUrl.com/{variant}/{z}/{x}/{y}"}
+                        placeholder="catalog.urlPlaceHolders.custom"
                         value={service && service.url}
                         onChange={(e) => onChangeUrl(e.target.value)} />
                 </React.Fragment>
@@ -101,7 +101,7 @@ const TmsURLEditor = ({ serviceTypes = [], onChangeServiceProperty, service = {}
                             style={{
                                 textOverflow: "ellipsis"
                             }}
-                            placeholder={defaultPlaceholder(service)}
+                            placeholder="catalog.urlPlaceHolders.tms"
                             value={service && service.url}
                             onChange={(e) => onChangeUrl(e.target.value)} />
                     </React.Fragment>
@@ -121,7 +121,7 @@ const COGEditor = ({ service = {}, onChangeServiceProperty = () => { } }) => {
                     style={{
                         textOverflow: "ellipsis"
                     }}
-                    placeholder={defaultPlaceholder(service)}
+                    placeholder="catalog.urlPlaceHolders.cog"
                     value={service && service.records && service.records.map(record => record?.url)?.join(',')}
                     onChange={(e) => {
                         let urls = e.target.value || "";
@@ -153,18 +153,22 @@ export default ({
     onChangeType,
     setValid = () => {}
 }) => {
-    const [invalidProtocol, setInvalidProtocol] = useState(false);
+    const [error, setError] = useState(null);
+    const [warning, setWarning] = useState(null);
     function handleProtocolValidity(url) {
         onChangeUrl(url);
         if (url) {
-            const isInvalidProtocol = !isValidURL(url, null, service?.allowUnsecureLayers);
-            setInvalidProtocol(isInvalidProtocol);
-            setValid(!isInvalidProtocol);
+            const {valid, errorMsgId} = checkUrl(url, null, service?.allowUnsecureLayers);
+            if (errorMsgId === "catalog.invalidUrlHttpProtocol") {
+                setError(null);
+                setWarning(errorMsgId);
+            } else {
+                setWarning(null);
+                setError(valid ? null : errorMsgId);
+                setValid(valid);
+            }
         }
     }
-    useEffect(() => {
-        !isEmpty(service.url) && handleProtocolValidity(service.url);
-    }, [service?.allowUnsecureLayers]);
     const URLEditor = service.type === "tms" ? TmsURLEditor : service.type === "cog" ? COGEditor : DefaultURLEditor;
     return (
         <Form horizontal >
@@ -192,8 +196,11 @@ export default ({
             </FormGroup>
             <URLEditor key="url-row" serviceTypes={serviceTypes} service={service} onChangeUrl={handleProtocolValidity} onChangeTitle={onChangeTitle} onChangeServiceProperty={onChangeServiceProperty} />
 
-            {invalidProtocol ? <Alert bsStyle="danger">
-                <Message msgId="catalog.invalidUrlHttpProtocol" />
+            {error ? <Alert bsStyle="danger">
+                <Message msgId={error} />
+            </Alert> : null}
+            {warning ? <Alert bsStyle="warning">
+                <Message msgId={warning} />
             </Alert> : null}
 
         </Form>);

@@ -12,15 +12,18 @@ import expect from 'expect';
 import RasterAdvancedSettings from "../RasterAdvancedSettings";
 import TestUtils from "react-dom/test-utils";
 import { waitFor } from '@testing-library/react';
+import { setConfigProp } from "../../../../../utils/ConfigUtils";
 
 describe('Test Raster advanced settings', () => {
     beforeEach((done) => {
         document.body.innerHTML = '<div id="container"></div>';
+        setConfigProp('miscSettings', { experimentalInteractiveLegend: true });
         setTimeout(done);
     });
     afterEach((done) => {
         ReactDOM.unmountComponentAtNode(document.getElementById("container"));
         document.body.innerHTML = '';
+        setConfigProp('miscSettings', { });
         setTimeout(done);
     });
     it('creates the component with defaults', () => {
@@ -33,14 +36,19 @@ describe('Test Raster advanced settings', () => {
         const advancedSettingPanel = document.getElementsByClassName("mapstore-switch-panel");
         expect(advancedSettingPanel).toBeTruthy();
         const fields = document.querySelectorAll(".form-group");
-        expect(fields.length).toBe(15);
+        expect(fields.length).toBe(14);
+        // check disabled refresh button
+
     });
     it('test wms advanced options with no vendor serverType', () => {
         ReactDOM.render(<RasterAdvancedSettings service={{type: "wms", autoload: false, layerOptions: {serverType: 'no-vendor'}}} isLocalizedLayerStylesEnabled/>, document.getElementById("container"));
         const advancedSettingPanel = document.getElementsByClassName("mapstore-switch-panel");
         expect(advancedSettingPanel).toBeTruthy();
         const fields = document.querySelectorAll(".form-group");
-        expect(fields.length).toBe(13);
+        expect(fields.length).toBe(12);
+        const refreshButton = document.querySelectorAll('button')[0];
+        expect(refreshButton).toBeTruthy();
+        expect(refreshButton.disabled).toBe(false);
     });
     it('test csw advanced options', () => {
         ReactDOM.render(<RasterAdvancedSettings service={{type: "csw", autoload: false}}/>, document.getElementById("container"));
@@ -63,6 +71,9 @@ describe('Test Raster advanced settings', () => {
         expect(fields.length).toBe(12);
         expect(cswFilters).toBeTruthy();
         expect(sortBy).toBeTruthy();
+        const refreshButton = document.querySelectorAll('button')[0];
+        expect(refreshButton).toBeTruthy();
+        expect(refreshButton.disabled).toBe(true);
     });
     it('test component onChangeServiceProperty autoload', () => {
         const action = {
@@ -203,30 +214,6 @@ describe('Test Raster advanced settings', () => {
         expect(spyOn).toHaveBeenCalled();
         expect(spyOn.calls[0].arguments).toEqual([ 'layerOptions', { tileSize: 512 } ]);
     });
-    it('test component onChangeServiceProperty allowUnsecureLayers', () => {
-        const action = {
-            onChangeServiceProperty: () => {}
-        };
-        const spyOn = expect.spyOn(action, 'onChangeServiceProperty');
-        ReactDOM.render(<RasterAdvancedSettings
-            onChangeServiceProperty={action.onChangeServiceProperty}
-            service={{type: "wms", allowUnsecureLayers: false}}
-        />, document.getElementById("container"));
-        const advancedSettingsPanel = document.getElementsByClassName("mapstore-switch-panel");
-        expect(advancedSettingsPanel).toBeTruthy();
-        const allowUnsecureLayers = document.querySelectorAll('input[type="checkbox"]')[3];
-        const formGroup = document.querySelectorAll('.form-group')[4];
-        expect(formGroup.textContent.trim()).toBe('catalog.allowUnsecureLayers.label');
-        expect(allowUnsecureLayers).toBeTruthy();
-        TestUtils.Simulate.change(allowUnsecureLayers, { "target": { "checked": true }});
-        expect(spyOn).toHaveBeenCalled();
-        expect(spyOn.calls[0].arguments).toEqual([ 'allowUnsecureLayers', true ]);
-
-        // Unset allowUnsecureLayers
-        TestUtils.Simulate.change(allowUnsecureLayers, { "target": { "checked": false }});
-        expect(spyOn).toHaveBeenCalled();
-        expect(spyOn.calls[1].arguments).toEqual([ 'allowUnsecureLayers', false ]);
-    });
     it('test component onChangeServiceProperty useCacheOption for remote tile grids', () => {
         const action = {
             onChangeServiceProperty: () => {}
@@ -238,7 +225,7 @@ describe('Test Raster advanced settings', () => {
         />, document.getElementById("container"));
         const advancedSettingsPanel = document.getElementsByClassName("mapstore-switch-panel");
         expect(advancedSettingsPanel).toBeTruthy();
-        const formGroup = document.querySelectorAll('.form-group')[7];
+        const formGroup = document.querySelectorAll('.form-group')[6];
         expect(formGroup.textContent.trim()).toBe('layerProperties.useCacheOptionInfo.label');
         const useCacheOption = formGroup.querySelector('input[type="checkbox"]');
         expect(useCacheOption).toBeTruthy();

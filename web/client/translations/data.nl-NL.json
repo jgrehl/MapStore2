@@ -1597,6 +1597,18 @@
             "servicePlaceholder": "typ een service",
             "url": "URL",
             "urlPlaceholder": "typ een URL",
+            "urlPlaceHolders": {
+              "wfs": "e.g. https://mydomain.com/geoserver/wfs",
+              "wmts": "e.g. https://mydomain.com/geoserver/gwc/service/wmts",
+              "wms": "e.g. https://mydomain.com/geoserver/wms",
+              "csw": "e.g. https://mydomain.com/geoserver/csw",
+              "tms": "e.g. https://mydomain.com/geoserver/gwc/service/tms/1.0.0",
+              "custom": "e.g. https://{s}.myUrl.com/{variant}/{z}/{x}/{y}",
+              "3dtiles": "e.g. https://mydomain.com/tileset.json",
+              "cog": "e.g. https://mydomain.com/cog.tif",
+              "model": "e.g. https://mydomain.com/filename.ifc",
+              "arcgis": "e.g. https://mydomain.com/arcgis/rest/services"
+            },
             "type": "Type",
             "serviceTitle": "Titel",
             "serviceTitlePlaceholder": "Typ een titel",
@@ -1624,7 +1636,7 @@
             "showPreview": "Voorbeeld weergeven",
             "advancedSettings": "Geavanceerde instellingen",
             "templateMetadataAvailable": "Metadata beschikbaar in Dublin Core-formaat: abstract, boundingBox, bijdrager, maker, beschrijving, formaat, identifier, referenties, rechten, bron, onderwerp, tijdelijk, titel, type, uri",
-            "invalidUrlHttpProtocol": "Catalogus kan niet toegevoegd worden omdat het HTTP protocol gebruikt wordt. Gelieve een URL op te geven die HTTPS gebruikt",
+            "invalidUrlHttpProtocol": "De opgegeven URL is niet veilig omdat deze HTTP gebruikt. Er moet een URL worden opgegeven die het HTTPS-protocol gebruikt. Bij gebruik van HTTP worden verzoeken automatisch verwerkt om browserbeveiligingsproblemen te voorkomen door via de proxy te gaan",
             "notification": {
                 "errorTitle": "Fout",
                 "errorSearchingRecords": "Sommige records zijn niet gevonden: {records} Controleer de query-URL en de bijbehorende parameters.",

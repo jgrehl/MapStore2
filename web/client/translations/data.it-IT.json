@@ -379,7 +379,8 @@
             "Examples": "Esempi",
             "LinkedinGroup": "Gruppo Linkedin Mapstore",
             "scrollTop": "Torna all'inizio della pagina",
-            "footerDescription": "<strong>GeoSolutions</strong> <a href=\"mailto:sales@geosolutionsgroup.com\">sales@geosolutionsgroup.com</a>"
+            "footerDescription": "<strong>GeoSolutions</strong> <a href=\"mailto:sales@geosolutionsgroup.com\">sales@geosolutionsgroup.com</a>",
+            "footerCustomHTML": "<div><p>Per favore, inserisci un HTML custom nelle traduzioni per renderizzare un footer personalizzato</p></div>"
         },
         "cookiesPolicyNotification": {
             "title": "Questo sito utilizza cookies",
@@ -1602,6 +1603,18 @@
             "servicePlaceholder": "seleziona un servizio",
             "url": "Url",
             "urlPlaceholder": "inserisci un url",
+            "urlPlaceHolders": {
+              "wfs": "e.g. https://mydomain.com/geoserver/wfs",
+              "wmts": "e.g. https://mydomain.com/geoserver/gwc/service/wmts",
+              "wms": "e.g. https://mydomain.com/geoserver/wms",
+              "csw": "e.g. https://mydomain.com/geoserver/csw",
+              "tms": "e.g. https://mydomain.com/geoserver/gwc/service/tms/1.0.0",
+              "custom": "e.g. https://{s}.myUrl.com/{variant}/{z}/{x}/{y}",
+              "3dtiles": "e.g. https://mydomain.com/tileset.json",
+              "cog": "e.g. https://mydomain.com/cog.tif",
+              "model": "e.g. https://mydomain.com/filename.ifc",
+              "arcgis": "e.g. https://mydomain.com/arcgis/rest/services"
+            },
             "type": "Tipo",
             "serviceTitle": "Titolo",
             "serviceTitlePlaceholder": "inserisci un titolo",
@@ -1629,7 +1642,8 @@
             "showPreview": "Mostra la preview",
             "advancedSettings": "Impostazioni avanzate",
             "templateMetadataAvailable": "Metadati disponibili del formato Dublin Core: abstract, boundingBox, contributor, creator, description, format, identifier, references, rights, source, subject, temporal, title, type, uri",
-            "invalidUrlHttpProtocol": "Questo catalogo non può essere aggiunto a quelli disponibili perché utilizza un protocollo http. Fornisci un URL di catalogo che utilizzi il protocollo https",
+            "invalidUrlHttpProtocol": "L'URL specificato non è sicuro poiché utilizza HTTP. È necessario fornire un URL che utilizzi il protocollo HTTPS. Utilizzando HTTP, le richieste verranno gestite automaticamente per prevenire problemi di sicurezza del browser passando attraverso il proxy",
+            "invalidArrayUsageForUrl": "Non è stato possibile leggere correttamente l'URL del catalogo",
             "notification": {
                 "errorTitle": "Errore",
                 "errorSearchingRecords": "Alcuni record non sono stati trovati: {records} . Controlla la lista dei parametri nella barra degli indirizzi",
