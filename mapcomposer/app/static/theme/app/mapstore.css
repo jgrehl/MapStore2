@@ -1,0 +1,330 @@
+#left-banner {
+	position : absolute;
+	left : 0;
+	top : 0;
+	width : 420px;
+	height : 86px;
+}
+#fdh-header {
+	position : absolute;
+	top : 0px;
+	left : 0px;
+	margin-right: 0px;
+	width : 100%;
+	background: url(img/fdh/bgimg.gif) repeat-x;
+}
+#right-banner {
+	float : right;
+	display : inline;
+	top : 0;
+	width : 378px;
+	height : 86px;
+}
+/*********************************
+ Welcome Screen
+*********************************/
+#loading-mask {
+  position: absolute;
+  background-color: #E3E3E3;
+  left:     0px;
+  top:      0px;
+  width:    100%;
+  height:   100%;
+  z-index:  20000;
+
+
+  /*background-color: transparent;*/
+}
+
+#loading {
+  position: absolute;
+
+  left:     0px;
+  top:      0px;
+  width:    100%;
+  height:   100%;
+  padding:  2px;
+  z-index:  20001;
+
+  background-size: 100% auto;
+  background-position:center bottom;
+  margin:   0 0 0 0;
+}
+
+#loading .loading-indicator {
+  background: url(img/loading_welcome.gif) no-repeat;
+
+  background-repeat: no-repeat;
+  background-position:center center;
+  background-attachment:fixed;
+  overflow:visible;
+
+  margin:0;
+  width:    100%;
+  height: 100%;
+
+  text-align: center;
+}
+
+/*********************************
+ Custom FDH logos
+*********************************/
+
+div#homelogos ul {
+    display: block;
+    font-size: 11px;
+    margin: 0px auto;
+    list-style-type: none;
+}
+div#homelogos ul li {
+    padding-left: 10px; float: left
+}
+div#homelogos ul li a {
+    padding-right: 3px;
+    display: block;
+    padding-left: 3px;
+    font-size: 12px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    text-decoration: none
+}
+
+div#homelogos {
+    margin: 10px auto;
+    width: 900px;
+    text-align: center;
+}
+div#homelogos ul li a {
+    width: 48px; height: 48px;
+    border-right: #fff 1px transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-bottom: #fff 1px transparent;
+}
+div#homelogos ul li a:hover {
+    border-right: #ccc 1px solid;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-bottom: #ccc 1px solid
+}
+.logo_au {
+    background: url(img/logos/logo_au.jpg) no-repeat center 50%;
+}
+.logo_au_th {
+    background: url(img/logos/logo_au_th.jpg) no-repeat center 50%;
+}
+.logo_abn {
+    background: url(img/logos/logo_abn.jpg) no-repeat center 50%;
+}
+.logo_ciat {
+    background: url(img/logos/logo_ciat.jpg) no-repeat center 50%;
+}
+.logo_cilss {
+    background: url(img/logos/logo_cilss.jpg) no-repeat center 50%;
+}
+.logo_ecowas {
+    background: url(img/logos/logo_ecowas.jpg) no-repeat center 50%;
+}
+.logo_fao {
+    background: url(img/logos/logo_fao.jpg) no-repeat center 50%;
+}
+.logo_gef {
+    background: url(img/logos/logo_gef.png) no-repeat center 50%;
+}
+.logo_gefweb {
+    background: url(img/logos/logo_gef.png) no-repeat center 50%;
+}
+.logo_globalmechanism {
+    background: url(img/logos/logo_globalmechanism.jpg) no-repeat center 50%;
+}
+.logo_manoriverunion {
+    background: url(img/logos/logo_manoriverunion.jpg) no-repeat center 50%;
+}
+.logo_omvg {
+    background: url(img/logos/logo_omvg.jpg) no-repeat center 50%;
+}
+.logo_omvs {
+    background: url(img/logos/logo_omvs.jpg) no-repeat center 50%;
+}
+.logo_unep {
+    background: url(img/logos/logo_unep.jpg) no-repeat center 50%;
+}
+.logo_wac {
+    background: url(img/logos/logo_wac.jpg) no-repeat center 50%;
+}
+.logo_gwpao4 {
+    background: url(img/logos/logo_gwpao4.jpg) no-repeat center 50%;
+}
+
+.csw-viewer{
+    background-image: url(img/geosilk/server_table.png);
+}
+
+/* gxp_wmsgetfeatureinfo */
+.getfeatureinfo-icon{
+   background-image: url(img/silk/information.png) !important;
+}
+
+/* marker selector*/
+#images-view .x-panel-body{
+	background: white;
+	font: 11px Arial, Helvetica, sans-serif;
+}
+#images-view .thumb{
+	padding: 3px;
+}
+#images-view .thumb img{
+	height: 45px;
+	margin:0 auto;
+
+}
+#images-view .thumb-wrap{
+	float: left;
+	margin: 4px;
+	margin-right: 0;
+	padding: 5px;
+}
+#images-view .thumb-wrap span{
+	display: block;
+	overflow: hidden;
+	text-align: center;
+}
+
+#images-view .x-view-over{
+    border:1px solid #dddddd;
+    background: #efefef;
+	padding: 4px;
+}
+
+#images-view .x-view-selected{
+	background: #eff5fb no-repeat right bottom;
+	border:1px solid #99bbe8;
+	padding: 4px;
+}
+#images-view .x-view-selected .thumb{
+	background:transparent;
+}
+
+.marker-icon-style{
+	background-size:15px;
+}
+
+.south-panel .x-layout-collapsed-south{
+    background: url(img/collapsed-south.png) no-repeat center;
+}
+/*to fix checkboxToggle top margin hide in IE*/
+.x-fieldset legend input {
+    margin-right:3px;
+    float:left !important;
+    height:14px; /*change from 13px to 14px*/
+    width:13px;
+}
+
+/* gxp_categoryinitializer */
+.initCategoriesMessage{
+    padding: 20px;
+}
+
+/* LayerNodeUI */
+.x-tree-node-error .x-tree-node-icon{
+	background-image:url(img/silk/cancel.png) !important;
+}
+/* when OL encounters a 404, don't display the pink image
+.olImageLoadError {
+
+    display: none !important;
+} */
+
+/*FIX FOLLSCREEN BEHAVIOUR */
+.x-layout-collapsed{
+    position:absolute;
+    left:-10000px;
+    top:-10000px;
+    visibility:hidden;
+    /*width:20px !important;
+    height:20px !important;*/
+    overflow:hidden;
+	border:0px solid;
+	z-index:20;
+}
+
+.ext-border-box .x-layout-collapsed{
+    width:22px;
+    height:22px;
+}
+
+.x-layout-collapsed-over{
+    cursor:pointer;
+}
+
+.x-layout-collapsed.x-layout-collapsed-north, .x-layout-collapsed.x-layout-collapsed-south{
+	position:absolute;
+    top:0;
+    left:0;
+    height:20px !important;
+}
+
+.x-layout-collapsed.x-layout-collapsed-east, .x-layout-collapsed.x-layout-collapsed-west{
+	position:absolute;
+    top:0;
+    left:0;
+    width:20px !important;
+	background-image: url(img/query-panel-collapsed.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.x-layout-collapsed-west .x-layout-collapsed-tools, .x-layout-collapsed-east .x-layout-collapsed-tools{
+	position:absolute;
+    top:0;
+    left:0;
+    width:20px;
+    height:20px;
+}
+
+.x-layout-collapsed.x-layout-cmini-west, .x-layout-collapsed.x-layout-cmini-east {
+    border:0 none;
+    width:5px !important;
+    padding:0;
+    background-color:transparent;
+}
+
+.x-layout-collapsed.x-layout-cmini-north, .x-layout-collapsed.x-layout-cmini-south {
+    border:0 none;
+    height:5px !important;
+    padding:0;
+    background-color:transparent;
+}
+
+/* gxp_downloadpanel */
+.x-action-col-cell  .loading{
+    background-image: url(img/loadingbar.gif) !important;
+    width:16px;
+    height:16px;
+}
+
+.x-action-col-cell  .accept {
+    background-image: url(img/silk/accept.png) !important;
+    width:16px;
+    height:16px;
+}
+
+.x-action-col-cell  .decline {
+    background-image: url(img/silk/decline.png) !important;
+    width:16px;
+    height:16px;
+}
+
+.x-action-col-cell  .download, .x-btn .download{
+    background-image: url(img/download.png) !important;
+    width:16px;
+    height:16px;
+}
+
+.x-action-col-cell  .exec-id {
+    background-image: url(img/silk/tag_blue.png) !important;
+    width:16px;
+    height:16px;
+	margin-left: 15px;
+	background-repeat: no-repeat;
+}
