@@ -1,0 +1,342 @@
+/* setting font fixes combobox rendering issues in IE. See
+ * http://extjs.com/forum/showthread.php?t=72505 */
+body {
+    font-family:helvetica,tahoma,verdana,sans-serif;
+}
+
+/* don't wrap lines on any tooltips */
+.x-tip {
+    white-space: nowrap;
+}
+
+.x-tip .x-tip-body table tbody {
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-size: 11px;
+	line-height: normal;
+	font-family: tahoma, arial, helvetica, sans-serif;
+}
+/* get images on buttons with text to line up with those with no text */
+.x-btn-text-icon .x-btn-center .x-btn-text {
+    background-position: 0 3px;
+}
+
+/* apply some margin when using the row expander */
+.x-grid3-row-body p {
+    margin: 5px !important;
+}
+
+/* workaround for semi-alpha pixels in IE7: background needs to be the same
+ * as the toolbar's background color */
+.ext-ie .x-item-disabled .x-btn-text {
+    background-color: #EAEAEA;
+}
+
+.x-tree-node img.gx-folder, .x-tree-node-collapsed img.gx-folder{
+    background: url(../../externals/ext/resources/images/default/tree/folder.gif);
+}
+ 
+.x-tree-node-expanded img.gx-folder {
+    background: url(../../externals/ext/resources/images/default/tree/folder-open.gif);
+}
+.x-tree-node-leaf .gx-tree-filterlayer-icon{
+    background-image: url(img/geosilk/vector_filter.png);
+}
+.x-btn .login {
+    background-image: url(img/silk/door_in.png);
+}
+
+.login {
+    background-image: url(img/silk/user_green.png);
+}
+
+.x-btn .logout {
+    background-image: url(img/silk/door_out.png);
+}
+
+.logout {
+    background-image: url(img/silk/user_red.png);
+}
+
+.x-btn .icon-geoexplorer {
+    background-image: url(img/mapstore-logo.png);
+}
+
+.x-btn .icon-about {
+    background-image: url(img/silk/help.png);
+}
+
+.x-btn .icon-addlayers {
+    background-image: url(img/silk/add.png);
+}
+
+.x-btn .icon-addserver {
+    background-image: url(img/silk/map_add.png);
+}
+
+.x-btn .icon-removelayers, .x-menu-item .icon-removelayers {
+    background-image: url(img/silk/delete.png);
+}
+
+.x-btn .icon-properties, .x-menu-item .icon-properties {
+    background-image: url(img/silk/wrench.png);
+}
+
+.x-btn .icon-removemarkers {
+    background-image: url(img/geosilk/vector_delete.png);
+}
+
+.x-btn .icon-removewfsmarkers {
+    background-image: url(img/geosilk/tag_blue_delete.png);
+}
+
+.x-btn .icon-removenominatimmarkers {
+    background-image: url(img/geosilk/world_delete.png);
+}
+
+.x-btn .icon-getfeatureinfo {
+    background-image: url(img/silk/information.png);
+}
+
+.x-btn .icon-fullscreen {
+    background-image: url(img/silk/application_view_gallery.png);
+}
+
+.x-btn .icon-changematrix {
+    background-image: url(img/silk/application_side_expand.png);
+}
+
+.x-btn .icon-save {
+    background-image: url(img/geosilk/map_save.png);
+}
+
+.x-btn .icon-load {
+    background-image: url(img/geosilk/map.png);
+}
+
+.x-btn .upload-icon {
+    background: url(img/geosilk/page_white_map.png) no-repeat 0 0 !important;
+}
+
+.x-btn .icon-export {
+    background-image: url(img/silk/world_link.png);
+}
+
+.x-btn .icon-measure {
+    background-image: url(img/geosilk/measure.png);
+}
+
+.icon-piechart {
+    background-image: url(img/silk/pie-chart-icon.png);
+}
+
+.data-table {
+    background-image: url(img/silk/data_table.png);
+}
+
+.icon-measure-length {
+    background-image: url(img/geosilk/ruler.png) !important;
+}
+
+.icon-measure-area {
+   background-image: url(img/geosilk/ruler_square.png) !important;
+}
+
+.x-btn .icon-layer-switcher {
+   background-image: url(img/silk/layers.png);
+}
+
+.x-btn .icon-zoom-in { 
+    background-image: url(img/silk/magnifier_zoom_in.png);
+}
+
+.x-btn .icon-zoom-out { 
+    background-image: url(img/silk/magnifier_zoom_out.png);
+}
+
+.x-btn .icon-zoom-previous { 
+    background-image: url(img/silk/arrow_left.png);
+}
+
+.x-btn .icon-zoom-next { 
+    background-image: url(img/silk/arrow_right.png);
+}
+
+.x-btn .icon-zoom-visible { 
+    background-image: url(img/silk/arrow_out.png);
+}
+
+.x-btn .icon-zoom-to, .x-menu-item .icon-zoom-to { 
+    background-image: url(img/silk/magnifier.png);
+}
+
+.x-btn .icon-pan { 
+    background-image: url(img/geosilk/pan.png);
+}
+
+.x-btn .icon-3D {
+    background-image: url(img/geosilk/google_earth.png);
+}
+
+.x-btn .icon-geosol {
+    background-image: url(img/poweredby.png);
+    width:150px !important;
+}
+
+.x-btn .x-icon-addimage {
+     background-image: url(img/silk/image_add.png);
+}
+
+/* position the zoom slider within map panel */
+.gx-zoomslider {
+    top: 90px;
+    left: 17px
+}
+
+.gx-layer-visibility {
+    background-image: url(img/silk/eye.png);
+}
+
+.gx-buffer{
+    background-image: url(img/silk/map_add.png);
+}
+
+.gx-cursor{
+    background-image: url(img/silk/cursor.png);
+}
+
+.gx-map-go{
+    background-image: url(img/silk/map_go.png);
+}
+
+.gx-map-edit{
+    background-image: url(img/silk/map_edit.png);
+}
+
+.gx-map-link {
+    background-image: url(img/silk/link.png);
+}
+
+.gx-map-add{
+    background-image: url(img/silk/map_add.png);
+}
+.gx-help{
+   background-image: url(img/silk/help.png);
+}
+.x-action-col-cell  .reset{
+	background-image: url(img/silk/delete.png) !important;
+	width:16px;
+	height:16px;
+}
+
+.gx-field-label {
+    font-weight: bold;
+    margin: 4px;
+    vertical-align: baseline;
+}
+
+.gx-export-section {
+    padding: 10px 10px 5px 10px;
+}
+
+.gx-info-panel {
+    margin: 1em;
+}
+
+.gx-info-panel h2 {
+    margin-top: 1em;
+}
+
+.gx-item-margin-left{
+    margin-left: 2px;
+}
+
+div.geosolutions_logo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+    height: 61px;
+    background: url('img/GeoSolutions_logo.png') center  no-repeat;
+}
+
+/* TODO: Remove this if GetFeatureInfo is changed from text/html */
+
+table.featureInfo, table.featureInfo td, table.featureInfo th {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    font-size: 90%;
+    padding: .2em .1em;
+}
+table.featureInfo th {
+    padding: .2em .2em;
+    font-weight: bold;
+    background: #eee;
+}
+table.featureInfo td{
+    background: #fff;
+}
+table.featureInfo tr.odd td{
+    background: #eee;
+}
+table.featureInfo caption{
+    text-align: left;
+    font-size: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: .2em .2em;
+}
+
+.loading-iframe {
+	width: 100%;
+	height: 100%;
+	background: transparent url(img/ajax-loader.gif) center no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* Feature grid Export */
+.gxp-icon-featuregrid-export {
+    background-position-x: 2px !important;
+    background-position-y: 4px !important;
+    padding-left: 20px;
+    padding-top: 5px;
+    height: 20px;
+}
+
+/* csv_export */
+.gxp-icon-csvexport{
+    background: transparent url(img/silk/page_white_text.png) no-repeat;
+}
+
+/* excel_export */
+.x-btn .gxp-icon-excelexport, .x-menu-item .gxp-icon-excelexport{
+    background-image: url(img/silk/page_excel.png) !important;
+}
+.gxp-icon-excelexport {
+    background: transparent url(img/silk/page_excel.png) no-repeat;
+}
+
+/* excel2007_export */
+.x-btn .gxp-icon-excel2007export, .x-menu-item .gxp-icon-excel2007export{
+    background-image: url(img/silk/page_white_office.png) !important;
+}
+.gxp-icon-excel2007export {
+    background: transparent url(img/silk/page_white_office.png) no-repeat;
+}
+
+/* shp_export */
+.x-btn .gxp-icon-shape-zipexport, .x-menu-item .gxp-icon-shape-zipexport{
+    background-image: url(img/silk/page_white_zip.png) !important;
+}
+.gxp-icon-shape-zipexport {
+    background: transparent url(img/silk/page_white_zip.png) no-repeat;
+}
+
+.user-icon{
+    background-image: url(img/silk/user.png);
+}
