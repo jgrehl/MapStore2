@@ -8,7 +8,6 @@
 ![Github issues](https://img.shields.io/github/issues/jgrehl/mapstore2)
 ![Github last-commit](https://img.shields.io/github/last-commit/jgrehl/mapstore2)
 
-
 MapStore is an open-source web mapping framework that enables users to create, share, and embed maps and dashboards with ease, drawing from a broad range of geospatial data sources. Designed for flexibility and scalability, MapStore integrates seamlessly with **OpenLayers**, **Leaflet**, and **Cesium** for both **2D** and **3D** visualization, allowing users to explore maps in a dynamic, real-time environment.
 
 With built-in support for **OGC** **standards** (such as **WMS**, **WMTS**, **WFS**, **3DTiles** and **CSW**), MapStore caters to the needs of professional GIS users while maintaining an intuitive interface for casual users. It supports rich feature configurations like layer styling, spatial analysis tools, and collaborative editing, making it a robust solution for diverse industries—from urban planning to environmental monitoring.
