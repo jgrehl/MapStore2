@@ -8,3 +8,9 @@ site
 .DS_Store
 venv
 __pycache__
+node_modules
+coverage
+web/client/dist
+java/web/target
+product/target
+web/docs

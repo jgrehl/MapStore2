@@ -1,9 +1,11 @@
 # MapStore
-
-![Build Checks](https://github.com/geosolutions-it/MapStore2/actions/workflows/CI.yml/badge.svg?branch=master)
-[![Coverage Status](https://coveralls.io/repos/github/geosolutions-it/MapStore2/badge.svg?branch=master)](https://coveralls.io/github/geosolutions-it/MapStore2?branch=master)
-[![Master Documentation Status](https://readthedocs.org/projects/mapstore/badge/?version=latest)](https://docs.mapstore.geosolutionsgroup.com/en/latest/?badge=master)
-[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/fold_left.svg?style=social&label=Follow%20%40mapstore2)](https://twitter.com/mapstore2)
+[![Docker Pulls](https://badgen.net/docker/pulls/jgrehl/mapstore2?icon=docker&label=pulls)](https://hub.docker.com/r/jgrehl/mapstore2/)
+[![Docker Stars](https://badgen.net/docker/stars/jgrehl/mapstore2?icon=docker&label=stars)](https://hub.docker.com/r/jgrehl/mapstore2/)
+[![Docker Image Size](https://badgen.net/docker/size/jgrehl/mapstore2?icon=docker&label=image%20size)](https://hub.docker.com/r/jgrehl/mapstore2/)
+![Github stars](https://badgen.net/github/stars/jgrehl/mapstore2?icon=github&label=stars)
+![Github forks](https://badgen.net/github/forks/jgrehl/mapstore2?icon=github&label=forks)
+![Github issues](https://img.shields.io/github/issues/jgrehl/mapstore2)
+![Github last-commit](https://img.shields.io/github/last-commit/jgrehl/mapstore2)
 
 MapStore is an open-source web mapping framework that enables users to create, share, and embed maps and dashboards with ease, drawing from a broad range of geospatial data sources. Designed for flexibility and scalability, MapStore integrates seamlessly with **OpenLayers**, **Leaflet**, and **Cesium** for both **2D** and **3D** visualization, allowing users to explore maps in a dynamic, real-time environment.
 
