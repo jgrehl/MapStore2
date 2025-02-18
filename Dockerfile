@@ -1,7 +1,5 @@
 FROM tomcat:9-jdk11-openjdk AS mother
 LABEL maintainer="Jens Grehl<likeluckyjoe@gmail.com>"
-ARG MAPSTORE_WEBAPP_SRC="https://github.com/geosolutions-it/MapStore2/releases/latest/download/mapstore.war"
-ADD "${MAPSTORE_WEBAPP_SRC}" "/mapstore/"
 
 COPY ./docker/* /mapstore/docker/
 WORKDIR /mapstore
