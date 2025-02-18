@@ -1,4 +1,3 @@
-# MapStore
 [![Docker Pulls](https://badgen.net/docker/pulls/jgrehl/mapstore2?icon=docker&label=pulls)](https://hub.docker.com/r/jgrehl/mapstore2/)
 [![Docker Stars](https://badgen.net/docker/stars/jgrehl/mapstore2?icon=docker&label=stars)](https://hub.docker.com/r/jgrehl/mapstore2/)
 [![Docker Image Size](https://badgen.net/docker/size/jgrehl/mapstore2?icon=docker&label=image%20size)](https://hub.docker.com/r/jgrehl/mapstore2/)
@@ -6,6 +5,8 @@
 ![Github forks](https://badgen.net/github/forks/jgrehl/mapstore2?icon=github&label=forks)
 ![Github issues](https://img.shields.io/github/issues/jgrehl/mapstore2)
 ![Github last-commit](https://img.shields.io/github/last-commit/jgrehl/mapstore2)
+
+# MapStore
 
 MapStore is an open-source web mapping framework that enables users to create, share, and embed maps and dashboards with ease, drawing from a broad range of geospatial data sources. Designed for flexibility and scalability, MapStore integrates seamlessly with **OpenLayers**, **Leaflet**, and **Cesium** for both **2D** and **3D** visualization, allowing users to explore maps in a dynamic, real-time environment.
 
