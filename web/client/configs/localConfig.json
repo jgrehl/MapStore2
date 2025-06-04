@@ -78,7 +78,32 @@
   "userSessions": {
     "enabled": true
   },
-  "projectionDefs": [],
+  "projectionDefs": [
+    {
+      "code": "EPSG:5677",
+      "def": "+proj=tmerc +lat_0=0 +lon_0=9 +k=1 +x_0=3500000 +y_0=0 +ellps=bessel +nadgrids=transformation/BETA2007.gsb +units=m +no_defs +type=crs",
+      "extent": [3262472.55, 5236843.08, 3957072.2, 6123498.88],
+      "worldExtent": [5.86, 47.27, 15.04, 55.09]
+    },
+    {
+      "code": "EPSG:5678",
+      "def": "+proj=tmerc +lat_0=0 +lon_0=12 +k=1 +x_0=4500000 +y_0=0 +ellps=bessel +nadgrids=transformation/BETA2007.gsb +units=m +no_defs +type=crs",
+      "extent": [4035549.18, 5236827.63, 4730146.04, 6124046.06],
+      "worldExtent": [5.86, 47.27, 15.04, 55.09]
+    },
+    {
+      "code": "EPSG:25832",
+      "def": "+proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +type=crs",
+      "extent": [-1877994.66, 3638086.74, 3473041.38, 9494203.2],
+      "worldExtent": [-16.1, 32.88, 40.18, 84.73]
+    },
+    {
+      "code": "EPSG:25833",
+      "def": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +type=crs",
+      "extent": [-2465144.8, 3638055.41, 2885759.28, 9493779.8],
+      "worldExtent": [-16.1, 32.88, 40.18, 84.73]
+    }
+  ],
   "initialState": {
     "defaultState": {
       "catalog": {
@@ -576,15 +601,27 @@
           "editCRS": true,
           "showLabels": true,
           "showToggle": true,
-          "filterAllowedCRS": ["EPSG:4326", "EPSG:3857"],
-          "additionalCRS": {}
+          "filterAllowedCRS": ["EPSG:4326", "EPSG:3857", "EPSG:5677", "EPSG:5678", "EPSG:25832","EPSG:25833"],
+          "additionalCRS": {"EPSG:5677": {  "label": "DHDN:GK3"}, "EPSG:5678": {  "label": "DHDN:GK4"}, "EPSG:25832": {  "label": "UTM 32N"}, "EPSG:25833": {  "label": "UTM 33N"}}
         }
       },
       {
         "name": "CRSSelector",
         "cfg": {
-          "additionalCRS": {},
-          "filterAllowedCRS": ["EPSG:4326", "EPSG:3857"],
+          "additionalCRS": {
+            "EPSG:5677": {  "label": "DHDN:GK3"},
+            "EPSG:5678": {  "label": "DHDN:GK4"},
+            "EPSG:25832": {  "label": "UTM 32N"},
+            "EPSG:25833": {  "label": "UTM 33N"}
+          },
+          "filterAllowedCRS": [
+                  "EPSG:4326",
+                  "EPSG:3857",
+                  "EPSG:5677",
+                  "EPSG:5678",
+                  "EPSG:25832",
+                  "EPSG:25833"
+                ],
           "allowedRoles": ["ADMIN"]
         }
       },
