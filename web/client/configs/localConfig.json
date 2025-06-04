@@ -60,12 +60,30 @@
     }
   ],
   "monitorState": [
-    { "name": "router", "path": "router.location.pathname" },
-    { "name": "browser", "path": "browser" },
-    { "name": "geostorymode", "path": "geostory.mode" },
-    { "name": "featuregridmode", "path": "featuregrid.mode" },
-    { "name": "userrole", "path": "security.user.role" },
-    { "name": "printEnabled", "path": "print.capabilities" },
+    {
+      "name": "router",
+      "path": "router.location.pathname"
+    },
+    {
+      "name": "browser",
+      "path": "browser"
+    },
+    {
+      "name": "geostorymode",
+      "path": "geostory.mode"
+    },
+    {
+      "name": "featuregridmode",
+      "path": "featuregrid.mode"
+    },
+    {
+      "name": "userrole",
+      "path": "security.user.role"
+    },
+    {
+      "name": "printEnabled",
+      "path": "print.capabilities"
+    },
     {
       "name": "resourceCanEdit",
       "path": "resources.initialSelectedResource.canEdit"
@@ -82,26 +100,66 @@
     {
       "code": "EPSG:5677",
       "def": "+proj=tmerc +lat_0=0 +lon_0=9 +k=1 +x_0=3500000 +y_0=0 +ellps=bessel +nadgrids=transformation/BETA2007.gsb +units=m +no_defs +type=crs",
-      "extent": [3262472.55, 5236843.08, 3957072.2, 6123498.88],
-      "worldExtent": [5.86, 47.27, 15.04, 55.09]
+      "extent": [
+        3262472.55,
+        5236843.08,
+        3957072.2,
+        6123498.88
+      ],
+      "worldExtent": [
+        5.86,
+        47.27,
+        15.04,
+        55.09
+      ]
     },
     {
       "code": "EPSG:5678",
       "def": "+proj=tmerc +lat_0=0 +lon_0=12 +k=1 +x_0=4500000 +y_0=0 +ellps=bessel +nadgrids=transformation/BETA2007.gsb +units=m +no_defs +type=crs",
-      "extent": [4035549.18, 5236827.63, 4730146.04, 6124046.06],
-      "worldExtent": [5.86, 47.27, 15.04, 55.09]
+      "extent": [
+        4035549.18,
+        5236827.63,
+        4730146.04,
+        6124046.06
+      ],
+      "worldExtent": [
+        5.86,
+        47.27,
+        15.04,
+        55.09
+      ]
     },
     {
       "code": "EPSG:25832",
       "def": "+proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +type=crs",
-      "extent": [-1877994.66, 3638086.74, 3473041.38, 9494203.2],
-      "worldExtent": [-16.1, 32.88, 40.18, 84.73]
+      "extent": [
+        -1877994.66,
+        3638086.74,
+        3473041.38,
+        9494203.2
+      ],
+      "worldExtent": [
+        -16.1,
+        32.88,
+        40.18,
+        84.73
+      ]
     },
     {
       "code": "EPSG:25833",
       "def": "+proj=utm +zone=33 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +type=crs",
-      "extent": [-2465144.8, 3638055.41, 2885759.28, 9493779.8],
-      "worldExtent": [-16.1, 32.88, 40.18, 84.73]
+      "extent": [
+        -2465144.8,
+        3638055.41,
+        2885759.28,
+        9493779.8
+      ],
+      "worldExtent": [
+        -16.1,
+        32.88,
+        40.18,
+        84.73
+      ]
     }
   ],
   "initialState": {
@@ -340,7 +398,9 @@
       },
       {
         "name": "Identify",
-        "showIn": ["Settings"],
+        "showIn": [
+          "Settings"
+        ],
         "cfg": {
           "showFullscreen": true,
           "position": "bottom",
@@ -392,7 +452,10 @@
         "name": "Search",
         "cfg": {
           "showOptions": false,
-          "withToggle": ["max-width: 768px", "min-width: 768px"]
+          "withToggle": [
+            "max-width: 768px",
+            "min-width: 768px"
+          ]
         }
       },
       {
@@ -432,8 +495,12 @@
         }
       },
       "FeedbackMask",
-      { "name": "Widgets" },
-      { "name": "WidgetsTray" }
+      {
+        "name": "Widgets"
+      },
+      {
+        "name": "WidgetsTray"
+      }
     ],
     "desktop": [
       "Details",
@@ -537,12 +604,18 @@
               "id": "Viewport",
               "name": "queryform.spatialfilter.methods.viewport"
             },
-            { "id": "BBOX", "name": "queryform.spatialfilter.methods.box" },
+            {
+              "id": "BBOX",
+              "name": "queryform.spatialfilter.methods.box"
+            },
             {
               "id": "Circle",
               "name": "queryform.spatialfilter.methods.circle"
             },
-            { "id": "Polygon", "name": "queryform.spatialfilter.methods.poly" }
+            {
+              "id": "Polygon",
+              "name": "queryform.spatialfilter.methods.poly"
+            }
           ]
         }
       },
@@ -601,34 +674,67 @@
           "editCRS": true,
           "showLabels": true,
           "showToggle": true,
-          "filterAllowedCRS": ["EPSG:4326", "EPSG:3857", "EPSG:5677", "EPSG:5678", "EPSG:25832","EPSG:25833"],
-          "additionalCRS": {"EPSG:5677": {  "label": "DHDN:GK3"}, "EPSG:5678": {  "label": "DHDN:GK4"}, "EPSG:25832": {  "label": "UTM 32N"}, "EPSG:25833": {  "label": "UTM 33N"}}
+          "filterAllowedCRS": [
+            "EPSG:4326",
+            "EPSG:3857",
+            "EPSG:5677",
+            "EPSG:5678",
+            "EPSG:25832",
+            "EPSG:25833"
+          ],
+          "additionalCRS": {
+            "EPSG:5677": {
+              "label": "DHDN:GK3"
+            },
+            "EPSG:5678": {
+              "label": "DHDN:GK4"
+            },
+            "EPSG:25832": {
+              "label": "UTM 32N"
+            },
+            "EPSG:25833": {
+              "label": "UTM 33N"
+            }
+          }
         }
       },
       {
         "name": "CRSSelector",
         "cfg": {
           "additionalCRS": {
-            "EPSG:5677": {  "label": "DHDN:GK3"},
-            "EPSG:5678": {  "label": "DHDN:GK4"},
-            "EPSG:25832": {  "label": "UTM 32N"},
-            "EPSG:25833": {  "label": "UTM 33N"}
+            "EPSG:5677": {
+              "label": "DHDN:GK3"
+            },
+            "EPSG:5678": {
+              "label": "DHDN:GK4"
+            },
+            "EPSG:25832": {
+              "label": "UTM 32N"
+            },
+            "EPSG:25833": {
+              "label": "UTM 33N"
+            }
           },
           "filterAllowedCRS": [
-                  "EPSG:4326",
-                  "EPSG:3857",
-                  "EPSG:5677",
-                  "EPSG:5678",
-                  "EPSG:25832",
-                  "EPSG:25833"
-                ],
-          "allowedRoles": ["ADMIN"]
+            "EPSG:4326",
+            "EPSG:3857",
+            "EPSG:5677",
+            "EPSG:5678",
+            "EPSG:25832",
+            "EPSG:25833"
+          ],
+          "allowedRoles": [
+            "ADMIN"
+          ]
         }
       },
       {
         "name": "Search",
         "cfg": {
-          "withToggle": ["max-width: 768px", "min-width: 768px"]
+          "withToggle": [
+            "max-width: 768px",
+            "min-width: 768px"
+          ]
         }
       },
       {
@@ -680,12 +786,30 @@
       },
       "OmniBar",
       "Login",
-      { "name": "ResourceDetails", "cfg": { "resourceType": "MAP" } },
-      { "name": "Save", "cfg": { "resourceType": "MAP" } },
-      { "name": "SaveAs", "cfg": { "resourceType": "MAP" } },
+      {
+        "name": "ResourceDetails",
+        "cfg": {
+          "resourceType": "MAP"
+        }
+      },
+      {
+        "name": "Save",
+        "cfg": {
+          "resourceType": "MAP"
+        }
+      },
+      {
+        "name": "SaveAs",
+        "cfg": {
+          "resourceType": "MAP"
+        }
+      },
       {
         "name": "DeleteResource",
-        "cfg": { "resourceType": "MAP", "redirectTo": "/" }
+        "cfg": {
+          "resourceType": "MAP",
+          "redirectTo": "/"
+        }
       },
       "Expander",
       "Undo",
@@ -709,7 +833,9 @@
       "FeedbackMask",
       "StyleEditor",
       "SidebarMenu",
-      { "name": "MapViews" },
+      {
+        "name": "MapViews"
+      },
       {
         "name": "Language"
       }
@@ -855,8 +981,12 @@
       "Notifications"
     ],
     "maps": [
-      { "name": "HomeDescription" },
-      { "name": "ResourcesSearch" },
+      {
+        "name": "HomeDescription"
+      },
+      {
+        "name": "ResourcesSearch"
+      },
       {
         "name": "ResourcesGrid",
         "cfg": {
@@ -913,8 +1043,12 @@
           ]
         }
       },
-      { "name": "TagsManager" },
-      { "name": "Favorites" },
+      {
+        "name": "TagsManager"
+      },
+      {
+        "name": "Favorites"
+      },
       {
         "name": "ResourcesFiltersForm",
         "cfg": {
@@ -970,8 +1104,12 @@
           }
         }
       },
-      { "name": "Footer" },
-      { "name": "About" },
+      {
+        "name": "Footer"
+      },
+      {
+        "name": "About"
+      },
       {
         "name": "Cookie",
         "cfg": {
@@ -980,11 +1118,29 @@
         }
       }
     ],
-    "permalink": ["Permalink", "FeedbackMask"],
+    "permalink": [
+      "Permalink",
+      "FeedbackMask"
+    ],
     "dashboard": [
-      { "name": "ResourceDetails", "cfg": { "resourceType": "DASHBOARD" } },
-      { "name": "Save", "cfg": { "resourceType": "DASHBOARD" } },
-      { "name": "SaveAs", "cfg": { "resourceType": "DASHBOARD" } },
+      {
+        "name": "ResourceDetails",
+        "cfg": {
+          "resourceType": "DASHBOARD"
+        }
+      },
+      {
+        "name": "Save",
+        "cfg": {
+          "resourceType": "DASHBOARD"
+        }
+      },
+      {
+        "name": "SaveAs",
+        "cfg": {
+          "resourceType": "DASHBOARD"
+        }
+      },
       "Details",
       "AddWidgetDashboard",
       "MapConnectionDashboard",
@@ -1023,10 +1179,17 @@
       },
       {
         "name": "DeleteResource",
-        "cfg": { "resourceType": "DASHBOARD", "redirectTo": "/" }
+        "cfg": {
+          "resourceType": "DASHBOARD",
+          "redirectTo": "/"
+        }
       },
-      { "name": "DashboardExport" },
-      { "name": "DashboardImport" },
+      {
+        "name": "DashboardExport"
+      },
+      {
+        "name": "DashboardImport"
+      },
       {
         "name": "BrandNavbar",
         "cfg": {
@@ -1045,10 +1208,22 @@
             "showConnectionsParamToggle": true,
             "allowFullScreen": false,
             "sizeOptions": {
-              "Small": { "width": 600, "height": 500 },
-              "Medium": { "width": 800, "height": 600 },
-              "Large": { "width": 1000, "height": 800 },
-              "Custom": { "width": 0, "height": 0 }
+              "Small": {
+                "width": 600,
+                "height": 500
+              },
+              "Medium": {
+                "width": 800,
+                "height": 600
+              },
+              "Large": {
+                "width": 1000,
+                "height": 800
+              },
+              "Custom": {
+                "width": 0,
+                "height": 0
+              }
             },
             "selectedOption": "Small"
           }
@@ -1102,12 +1277,18 @@
             }
           ],
           "spatialMethodOptions": [
-            { "id": "BBOX", "name": "queryform.spatialfilter.methods.box" },
+            {
+              "id": "BBOX",
+              "name": "queryform.spatialfilter.methods.box"
+            },
             {
               "id": "Circle",
               "name": "queryform.spatialfilter.methods.circle"
             },
-            { "id": "Polygon", "name": "queryform.spatialfilter.methods.poly" }
+            {
+              "id": "Polygon",
+              "name": "queryform.spatialfilter.methods.poly"
+            }
           ],
           "containerPosition": "columns"
         }
@@ -1149,15 +1330,30 @@
           "minLayoutWidth": 768
         }
       },
-      { "name": "FeedbackMask" }
+      {
+        "name": "FeedbackMask"
+      }
     ],
     "geostory": [
       {
         "name": "ResourceDetails",
-        "cfg": { "containerPosition": "columns", "resourceType": "GEOSTORY" }
+        "cfg": {
+          "containerPosition": "columns",
+          "resourceType": "GEOSTORY"
+        }
       },
-      { "name": "Save", "cfg": { "resourceType": "GEOSTORY" } },
-      { "name": "SaveAs", "cfg": { "resourceType": "GEOSTORY" } },
+      {
+        "name": "Save",
+        "cfg": {
+          "resourceType": "GEOSTORY"
+        }
+      },
+      {
+        "name": "SaveAs",
+        "cfg": {
+          "resourceType": "GEOSTORY"
+        }
+      },
       {
         "name": "BrandNavbar",
         "cfg": {
@@ -1188,10 +1384,17 @@
       },
       {
         "name": "DeleteResource",
-        "cfg": { "resourceType": "GEOSTORY", "redirectTo": "/" }
+        "cfg": {
+          "resourceType": "GEOSTORY",
+          "redirectTo": "/"
+        }
       },
-      { "name": "GeoStoryExport" },
-      { "name": "GeoStoryImport" },
+      {
+        "name": "GeoStoryExport"
+      },
+      {
+        "name": "GeoStoryImport"
+      },
       "MapEditor",
       "MediaEditor",
       {
@@ -1241,7 +1444,9 @@
           "containerPosition": "header"
         }
       },
-      { "name": "About" },
+      {
+        "name": "About"
+      },
       "Redirect",
       "Login",
       "Language",
@@ -1271,7 +1476,9 @@
       "UserManager",
       "GroupManager",
       "Footer",
-      { "name": "About" }
+      {
+        "name": "About"
+      }
     ]
   }
 }
